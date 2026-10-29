@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nova standardna "Material Blue" paleta za bolji kontrast -->
+    <color name="blue_primary">#2196F3</color>
+    <color name="blue_light">#64B5F6</color>
+    <color name="blue_dark">#1976D2</color>
+
+    <!-- Crna i tamne nijanse za Dark Mode -->
+    <color name="black">#000000</color>
+    <color name="dark_gray">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+
+    <!-- Tekst i akcenti -->
+    <color name="white">#FFFFFF</color>
+    <color name="gray_text">#B0B0B0</color>
+    <color name="error_red">#CF6679</color>
+
+    <!-- Kompatibilnost -->
+    <color name="blue">#2196F3</color>
+</resources>

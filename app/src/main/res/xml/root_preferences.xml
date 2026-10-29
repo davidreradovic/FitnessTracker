@@ -1,0 +1,67 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        app:defaultValue="sr"
+        app:entries="@array/language_entries"
+        app:entryValues="@array/language_values"
+        app:key="language"
+        app:title="@string/language"
+        app:useSimpleSummaryProvider="true"
+        app:iconSpaceReserved="false" />
+
+    <ListPreference
+        app:defaultValue="km"
+        app:entries="@array/unit_entries"
+        app:entryValues="@array/unit_values"
+        app:key="units"
+        app:title="@string/units"
+        app:useSimpleSummaryProvider="true"
+        app:iconSpaceReserved="false" />
+
+    <SwitchPreferenceCompat
+        app:defaultValue="true"
+        app:key="notifications"
+        app:title="@string/notifications"
+        app:summaryOn="@string/notifications_on"
+        app:summaryOff="@string/notifications_off"
+        app:iconSpaceReserved="false" />
+
+    <PreferenceCategory app:title="@string/goals_and_reminders"
+        app:iconSpaceReserved="false">
+        <EditTextPreference
+            app:defaultValue="5.0"
+            app:key="goal_distance"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            app:title="@string/daily_distance_goal"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+        <EditTextPreference
+            app:defaultValue="30"
+            app:key="goal_time"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            app:title="@string/daily_time_goal"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false"/>
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="daily_reminder"
+            app:title="@string/activity_reminder"
+            app:summary="@string/activity_reminder_summary"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/about_app"
+        app:iconSpaceReserved="false">
+        <Preference
+            app:key="osm_attribution"
+            app:title="@string/map_attribution_title"
+            app:summary="@string/map_attribution_summary"
+            app:iconSpaceReserved="false"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

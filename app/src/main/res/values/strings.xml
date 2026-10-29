@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Fitness Tracker</string>
+
+    <!-- Navigacija -->
+    <string name="nav_workout">Trening</string>
+    <string name="nav_history">Istorija</string>
+    <string name="nav_statistics">Statistika</string>
+    <string name="nav_settings">Podešavanja</string>
+
+    <string name="choose_workout">Izaberi trening</string>
+    <string name="running">Trčanje</string>
+    <string name="walking">Hodanje</string>
+    <string name="cycling">Biciklizam</string>
+
+    <string name="distance_km_label">Udaljenost (km)</string>
+    <string name="distance_mi_label">Udaljenost (mi)</string>
+    <string name="speed_kmh_label">Brzina (km/h)</string>
+    <string name="speed_mph_label">Brzina (mph)</string>
+    <string name="description_hint">Dodaj opis (opciono)</string>
+    <string name="start">ZAPOČNI</string>
+    <string name="finish">ZAVRŠI</string>
+    <string name="resume">NASTAVI</string>
+    <string name="stop">ZAUSTAVI</string>
+
+    <string name="km_unit">KM</string>
+    <string name="mi_unit">MI</string>
+    <string name="time_label">VRIJEME</string>
+    <string name="speed_label">KM/H</string>
+    <string name="mph_label">MPH</string>
+    <string name="ai_description">OPIS AKTIVNOSTI</string>
+    <string name="no_description">Nema unesenog opisa.</string>
+
+    <string name="history_title">Istorija aktivnosti</string>
+    <string name="sort_by">Sortiraj po:</string>
+    <string name="activity_type">Tip aktivnosti:</string>
+    <string name="statistics_title">Statistika</string>
+    <string name="this_week">Ova sedmica</string>
+
+    <string name="save_workout_title">Sačuvaj aktivnost</string>
+    <string name="save_workout_message">Da li želite da sačuvate aktivnost?</string>
+    <string name="yes">Da</string>
+    <string name="no">Ne</string>
+    <string name="delete_workout_title">Obriši aktivnost</string>
+    <string name="delete_workout_message">Da li ste sigurni da želite da obrišete ovu aktivnost?</string>
+    <string name="permissions_required">Dozvole su neophodne za rad aplikacije.</string>
+
+    <string name="general_settings">Opšta podešavanja</string>
+    <string name="language">Jezik</string>
+    <string name="units">Jedinice mere</string>
+    <string name="notifications">Notifikacije</string>
+    <string name="notifications_on">Uključene</string>
+    <string name="notifications_off">Isključene</string>
+
+    <string name="goals_and_reminders">Ciljevi i Podsetnici</string>
+    <string name="daily_distance_goal">Dnevni cilj udaljenosti</string>
+    <string name="daily_time_goal">Dnevni cilj vremena (minuta)</string>
+    <string name="activity_reminder">Podsetnik za aktivnost</string>
+    <string name="activity_reminder_summary">Podseti me ako danas nisam bio aktivan</string>
+    <string name="today_progress">Današnji napredak</string>
+    <string name="goal_congrats_title">Čestitamo!</string>
+    <string name="goal_congrats_msg">Ostvarili ste svoj današnji fitnes cilj! Samo tako nastavite!</string>
+    <string name="reminder_title">Vreme je za pokret!</string>
+    <string name="reminder_msg">Danas još niste zabeležili nijednu aktivnost. Ostvarite svoje ciljeve!</string>
+
+    <string name="about_app">O aplikaciji</string>
+    <string name="map_attribution_title">Podaci o mapi</string>
+    <string name="map_attribution_summary">Map data provided by © OpenStreetMap contributors under ODbL.</string>
+
+    <string-array name="filter_options">
+        <item>Datum</item>
+        <item>Trajanje</item>
+        <item>Udaljenost</item>
+        <item>Prosečna brzina</item>
+    </string-array>
+
+    <string-array name="type_filter_options">
+        <item>Sve aktivnosti</item>
+        <item>Trčanje</item>
+        <item>Hodanje</item>
+        <item>Biciklizam</item>
+    </string-array>
+
+    <string-array name="stat_metric_options">
+        <item>Udaljenost</item>
+        <item>Trajanje (min)</item>
+        <item>Prosečna brzina</item>
+    </string-array>
+
+    <string-array name="language_entries">
+        <item>Srpski</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>sr</item>
+        <item>en</item>
+    </string-array>
+    <string-array name="unit_entries">
+        <item>Kilometri (km)</item>
+        <item>Milje (mi)</item>
+    </string-array>
+    <string-array name="unit_values">
+        <item>km</item>
+        <item>mi</item>
+    </string-array>
+</resources>
