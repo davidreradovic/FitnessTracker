@@ -1,6 +1,7 @@
 package com.example.fitnesstracker.fragments;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -85,11 +86,12 @@ public class TrackingFragment extends Fragment {
         mapView.setTileSource(org.osmdroid.tileprovider.tilesource.TileSourceFactory.MAPNIK);
         mapView.setMultiTouchControls(true);
         mapView.setTilesScaledToDpi(true);
+
+        mapView.getController().setZoom(15.0);
         
         // Postavljamo podrazumevani centar (Banja Luka)
-        mapView.getController().setZoom(14.0);
-        mapView.getController().setCenter(new org.osmdroid.util.GeoPoint(44.7722, 17.1910));
-        
+        centerMapOnUserLocation();
+
         setupLocationOverlay();
         addAllPolylines();
         
@@ -105,7 +107,21 @@ public class TrackingFragment extends Fragment {
         return view;
     }
 
+    @SuppressLint("MissingPermission")
+    private void centerMapOnUserLocation() {
+        com.google.android.gms.location.FusedLocationProviderClient fusedClient =
+                com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(requireContext());
 
+        fusedClient.getLastLocation().addOnSuccessListener(requireActivity(), location -> {
+            if (location != null) {
+                org.osmdroid.util.GeoPoint userPoint = new org.osmdroid.util.GeoPoint(location.getLatitude(), location.getLongitude());
+                mapView.getController().setCenter(userPoint);
+            } else {
+                // Ako je lokacija null (npr. GPS još nije uhvatio fix), tek onda stavi Banja Luku kao rezervu
+                mapView.getController().setCenter(new org.osmdroid.util.GeoPoint(44.7722, 17.1910));
+            }
+        });
+    }
 
     private void subscribeToObservers() {
         TrackingService.isTracking.observe(getViewLifecycleOwner(), tracking -> {

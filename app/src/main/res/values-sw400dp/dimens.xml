@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Larger screens (e.g. Google Pixel 7, sw >= 400dp) -->
+    <dimen name="workout_card_height">150dp</dimen>
+    <dimen name="workout_icon_size">72dp</dimen>
+    <dimen name="workout_title_size">28sp</dimen>
+    <dimen name="card_text_size">34sp</dimen>
+    <dimen name="card_margin_bottom">20dp</dimen>
+</resources>

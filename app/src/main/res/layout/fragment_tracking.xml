@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="00:00:00"
         android:textColor="@color/white"
-        android:textSize="48sp"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"

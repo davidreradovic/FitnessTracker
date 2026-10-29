@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Standard / Smaller screens (e.g. Samsung A7) -->
+    <dimen name="workout_card_height">130dp</dimen>
+    <dimen name="workout_icon_size">64dp</dimen>
+    <dimen name="workout_title_size">26sp</dimen>
+    <dimen name="card_text_size">28sp</dimen>
+    <dimen name="card_margin_bottom">16dp</dimen>
+</resources>

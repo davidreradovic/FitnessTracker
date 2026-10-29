@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="@color/black">
 
     <LinearLayout
@@ -14,48 +15,50 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="24dp"
             android:text="@string/choose_workout"
             android:textColor="@color/white"
-            android:textSize="28sp"
+            android:textSize="@dimen/workout_title_size"
             android:textStyle="bold" />
 
         <!-- Trčanje -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cvRunning"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="@dimen/workout_card_height"
+            android:layout_marginBottom="@dimen/card_margin_bottom"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="#1C1C1E"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingHorizontal="20dp">
 
                 <ImageView
                     android:id="@+id/ivRunning"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:padding="20dp"
+                    android:layout_width="@dimen/workout_icon_size"
+                    android:layout_height="@dimen/workout_icon_size"
                     android:src="@drawable/running"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintWidth_percent="0.4"
                     app:tint="@color/blue_primary" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:text="@string/running"
                     android:textColor="@color/blue_primary"
-                    android:textSize="48sp"
+                    android:textSize="@dimen/card_text_size"
                     android:textStyle="bold|italic"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivRunning"
@@ -67,38 +70,40 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvWalking"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="@dimen/workout_card_height"
+            android:layout_marginBottom="@dimen/card_margin_bottom"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="#1C1C1E"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingHorizontal="20dp">
 
                 <ImageView
                     android:id="@+id/ivWalking"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:padding="24dp"
+                    android:layout_width="@dimen/workout_icon_size"
+                    android:layout_height="@dimen/workout_icon_size"
                     android:src="@drawable/directions_walk"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintWidth_percent="0.4"
                     app:tint="@color/blue_primary" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:text="@string/walking"
                     android:textColor="@color/blue_primary"
-                    android:textSize="48sp"
+                    android:textSize="@dimen/card_text_size"
                     android:textStyle="bold|italic"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivWalking"
@@ -110,38 +115,40 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvCycling"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="@dimen/workout_card_height"
+            android:layout_marginBottom="@dimen/card_margin_bottom"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             app:cardBackgroundColor="#1C1C1E"
-            app:cardCornerRadius="20dp"
+            app:cardCornerRadius="16dp"
             app:cardElevation="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:paddingHorizontal="20dp">
 
                 <ImageView
                     android:id="@+id/ivCycling"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:padding="20dp"
+                    android:layout_width="@dimen/workout_icon_size"
+                    android:layout_height="@dimen/workout_icon_size"
                     android:src="@drawable/directions_bike"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintWidth_percent="0.4"
                     app:tint="@color/blue_primary" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:text="@string/cycling"
                     android:textColor="@color/blue_primary"
-                    android:textSize="48sp"
+                    android:textSize="@dimen/card_text_size"
                     android:textStyle="bold|italic"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ivCycling"
